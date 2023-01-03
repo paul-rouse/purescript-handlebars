@@ -1,7 +1,9 @@
 "use strict";
 
-exports.compile = function(source) {
-    var template = require('handlebars').compile(source);
+import Handlebars from 'handlebars';
+
+export function compile (source) {
+    var template = Handlebars.compile(source);
     return function(context) {
         return template(context);
     };

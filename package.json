@@ -1,0 +1,20 @@
+{
+  "name": "purescript-handlebars",
+  "version": "3.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paul-rouse/purescript-handlebars"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules output .psci_modules .spago"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.7"
+  },
+  "devDependencies": {
+    "purescript": "^0.15.0",
+    "purescript-psa": "^0.8.2",
+    "spago": "^0.20.0"
+  }
+}

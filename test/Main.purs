@@ -1,11 +1,11 @@
 module Test.Main (main) where
 
 import Prelude
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE, log)
-import Text.Handlebars (compile)
+import Effect                     (Effect)
+import Effect.Class.Console       (log)
+import Text.Handlebars            (compile)
 
-main :: forall eff. Eff (console :: CONSOLE | eff) Unit
+main :: Effect Unit
 main = do
   let template1 :: forall a. a -> String
       template1 = compile "{{.}}"

@@ -1,7 +1,5 @@
 # purescript-handlebars
 
-[![Maintainer: paf31](https://img.shields.io/badge/maintainer-paf31-lightgrey.svg)](http://github.com/paf31) 
-
 [PureScript](http://www.purescript.org/) bindings for the [Handlebars](http://handlebarsjs.com/) text templating library.
 
 - [Module Documentation](docs/Text/Handlebars.md)
@@ -11,10 +9,18 @@
 
 To build the test project, clone this repo and then run:
 
-    pulp dep update
-    pulp build
-    pulp test
+    npm install --production
+    spago test
 
-To use this library in your own project:
+To use it in your own project, add an entry under "additions" in
+`packages.dhall` like this:
 
-    pulp dep i purescript-handlebars
+```
+    let additions =
+        { handlebars =
+            { dependencies = [] : List Text
+            , repo = "https://github.com/paul-rouse/purescript-handlebars.git"
+            , version = "v3.0.0"
+            }
+        }
+```
